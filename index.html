@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="quote-box">
+    <p id="quote">Click the button to see a new quote.</p>
+    <button onclick="generateQuote()">New Quote</button>
+</div>
+<script>
+    const quotes = [
+        { quote: "True terror is to wake up one morning and discover that your high school class is running the country." },
+        { quote: "The man who can smile when things go wrong has thought of someone else he can blame it on." },
+        { quote: "There is a fine line between not listening, and not caring. I like to think that I walk that line every day of my life." },
+        { quote: "Does the brain control you or are you controlling the brain? I don't know if I'm in charge of mine." },
+        { quote: "If you hate your job, you don't strike. You just go in day in and day out and do it really half-assed." },
+        { quote: "A good rule to remember for life is that when it comes to plastic surgery and sushi, never be attracted by a bargain." },
+        { quote: "As you get older, three things happen. The first is your memory goes, and I can’t remember the other two." },
+        { quote: "Clothes make the man. Naked people have little or no influence in society." },
+        { quote: "Gravitation is not responsible for people falling in love." },
+        { quote: "I'm not superstitious, but I am a little stitious." }
+    ];
+
+    function generateQuote() {
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+    let randomQuote = quotes[randomIndex].quote; // Access the 'quote' property
+    document.getElementById("quote").textContent = randomQuote;
+}
+</script>
+</body>
+</html>
+
